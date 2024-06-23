@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #531d53;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #d7addb;
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px 0;
+    background-color: #c779e6f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 2px solid #101310f1;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #c52eeb;
+    color: rgb(28, 20, 31);
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+td input {
+    background-color: #e746e7;
+    border: 2px solid #101310f1;
+}
+
+.factor-ponderacion {
+    margin: 20px 0;
+    color: rgb(150, 38, 194);
+}
+
+label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+select {
+    font-size: 1em;
+    padding: 5px;
+    background-color: #a11d75;
+}

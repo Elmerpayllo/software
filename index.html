@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SISTEMA DE GESTIÓN</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">VALOR DOMINIO DE INFORMACIÓN</th>
+                    <th rowspan="2">CONTEO</th>
+                    <th colspan="3">FACTOR DE PONDERACIÓN</th>
+                    <th rowspan="2">TOTAL</th>
+                </tr>
+                <tr>
+                    <th>SIMPLE</th>
+                    <th>PROMEDIO</th>
+                    <th>COMPLEJO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ENTRADAS EXTERNAS (EE)</td>
+                    <td><input type="number" id="conteo-ee" min="0"></td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td id="total-ee"></td>
+                </tr>
+                <tr>
+                    <td>SALIDAS EXTERNAS (SE)</td>
+                    <td><input type="number" id="conteo-se" min="0"></td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td id="total-se"></td>
+                </tr>
+                <tr>
+                    <td>CONSULTAS EXTERNAS (CE)</td>
+                    <td><input type="number" id="conteo-ce" min="0"></td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td id="total-ce"></td>
+                </tr>
+                <tr>
+                    <td>ARCHIVOS LÓGICOS INTERNOS (ALI)</td>
+                    <td><input type="number" id="conteo-ali" min="0"></td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td id="total-ali"></td>
+                </tr>
+                <tr>
+                    <td>ARCHIVOS DE INTERFAZ EXTERNOS (AIE)</td>
+                    <td><input type="number" id="conteo-aie" min="0"></td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>10</td>
+                    <td id="total-aie"></td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="text-align: right; font-weight: bold;">SUMA TOTAL</td>
+                    <td id="suma-total"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="factor-ponderacion">
+            <label for="factor-select">FACTOR DE PONDERACIÓN:</label>
+            <select id="factor-select">
+                <option value="simple">SIMPLE</option>
+                <option value="promedio">PROMEDIO</option>
+                <option value="complejo">COMPLEJO</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>VALORES</th>
+                    <th>PREGUNTAS</th>
+                </tr>
+            </thead>
+            <tbody id="preguntas-table-body">
+                <tr>
+                    <td><input type="number" id="valor-1" min="0" max="5" step="1"></td>
+                    <td>¿Requiere el sistema copias de seguridad y recuperación fiables?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-2" min="0" max="5" step="1"></td>
+                    <td>¿Se requiere comunicación de datos?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-3" min="0" max="5" step="1"></td>
+                    <td>¿Existen funciones de procesamiento distribuido?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-4" min="0" max="5" step="1"></td>
+                    <td>¿Es critico el rendimiento?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-5" min="0" max="5" step="1"></td>
+                    <td>¿Será ejecutado el sistema en un entorno operativo existente y frecuentemente utilizado?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-6" min="0" max="5" step="1"></td>
+                    <td>¿Requiere el sistema entrada de datos interactivo?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-7" min="0" max="5" step="1"></td>
+                    <td>¿Requiere la entrada de datos interactivo que las transiciones de entrada se lleven a cabo sobre múltiples o variadas operaciones?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-8" min="0" max="5" step="1"></td>
+                    <td>¿Se actualizan los archivos maestros en forma interactiva?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-9" min="0" max="5" step="1"></td>
+                    <td>¿Son complejas las entradas, las salidas, los archivos o peticiones?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-10" min="0" max="5" step="1"></td>
+                    <td>¿Es complejo el procesamiento interno?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-11" min="0" max="5" step="1"></td>
+                    <td>¿Se ha diseñado el código para ser reutilizable?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-12" min="0" max="5" step="1"></td>
+                    <td>¿Están incluidos en el diseño la conversión y la instalación?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-13" min="0" max="5" step="1"></td>
+                    <td>¿Se ha diseñado el sistema para soportar múltiples instalaciones en diferentes organizaciones?</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="valor-14" min="0" max="5" step="1"></td>
+                    <td>¿Se ha diseñado la aplicación para facilitar los cambios y para ser fácilmente utilizada por el usuario?</td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="text-align: right; font-weight: bold;">SUMA TOTAL</td>
+                    <td id="preguntas-suma-total"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tr>
+                <td><strong>FACTOR DE VALOR DE AJUSTE (FAV):</strong></td>
+                <td><span id="fav-value">0</span></td>
+            </tr>
+            <tr>
+                <td><strong>PUNTO DE FUNCIÓN AJUSTADO (PFA):</strong></td>
+                <td><span id="pfa-value">0</span></td>
+            </tr>
+            <tr>
+                <td><strong>CÁLCULO DE ESFUERZO NOMINAL:</strong></td>
+                <td><span id="esfuerzo-nominal-value">0</span></td>
+            </tr>
+            <tr>
+                <td><strong>ASIGNAR PROGRAMADORES:</strong></td>
+                <td><input type="number" id="asignar-programadores" min="1" max="10" value="1"></td>
+            </tr>
+            <tr>
+                <td><strong>DIAS TRABAJO MES:</strong></td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td><strong>CALCULO DE HORAS DESARROLLADOR:</strong></td>
+                <td><span id="calculo-horas-desarrollador">0</span></td>
+            </tr>
+            <tr>
+                <td><strong>DURACIÓN EN MESES:</strong></td>
+                <td><span id="duracion-en-meses">0 meses y 0 días</span></td>
+            </tr>
+            <tr>
+                <td><strong>SALARIO DEL DESARROLLADOR:</strong></td>
+                <td><span id="salario-desarrollar">0 Bs.</span></td>
+            </tr>
+            <tr>
+                <td><strong>COSTO DEL PROYECTO:</strong></td>
+                <td><span id="costo-proyecto">0 Bs.</span></td>
+            </tr>
+            <tr>
+                <td><strong>COSTO DEL MÓDULO:</strong></td>
+                <td><span id="costo-modulo">0 Bs.</span></td>
+            </tr>
+            
+        </table>
+        
+        
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
